@@ -1,0 +1,36 @@
+<!-- Hier komt een pagina met het nieuws (je hoeft het niet op te halen!!) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nieuws</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Afgelopen Nieuws</h1>
+    <br>
+   <div id="buttons">
+       <button class="btn" onclick="filterObjects('all')">Laat alles zien</button>
+       <button class="btn" onclick="filterObjects('Corona')">Corona</button>
+       <button class="btn" onclick="filterObjects('Economie')">Economie</button>
+       <button class="btn" onclick="filterObjects('Tech')">Tech</button>
+       <button class="btn" onclick="filterObjects('Sport')">Sport</button>
+   </div>
+
+   <div class="objects">
+       <div class="box Corona"><img src="/Nieuws IMG/Corona.jpg" alt="Corona"> </div>
+       <div class="box Economie"><img src="/Nieuws IMG/economie.PNG" alt="Economie"></div>
+       <div class="box Tech"><img src="/Nieuws IMG/tech.PNG" alt="Tech Plaatje"></div>
+       <div class="box Sport"><img src="/Nieuws IMG//sport.PNG" alt=""></div>
+   </div>
+
+
+   <script src="main.js"></script>
+</body>
+</html>
