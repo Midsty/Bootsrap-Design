@@ -9,7 +9,15 @@
     <title>Nieuws</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- De Link van Lightbox -->
+    <link rel="stylesheet" type="text/css" href="/css/lightbox.min.css">
+
+
+    <script src="/js/lightbox-plus-jquery.min.js"></script>
+    <!-- De JQuery Link -->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
 </head>
 <body>
 
@@ -30,7 +38,7 @@
           <a href="nieuws.html" class="nav-link">Nieuws</a>
         </li>
         <li class="nav-item">
-          <a href="Opmerkingen.html" class="nav-link">Opmerkingen</a>
+          <a href="Comments.html" class="nav-link">Opmerkingen</a>
         </li>
       </ul>
     </div>
@@ -42,22 +50,27 @@
     <br>
     <!-- De Buttons voor onderwerpen -->
    <div id="buttons">
-       <button class="btn" onclick="filterObjects('all')">Laat alles zien</button>
-       <button class="btn" onclick="filterObjects('Corona')">Corona</button>
-       <button class="btn" onclick="filterObjects('Economie')">Economie</button>
-       <button class="btn" onclick="filterObjects('Tech')">Tech</button>
-       <button class="btn" onclick="filterObjects('Sport')">Sport</button>
+       <button class="btn" data-filter="alles" onclick="filterObjects('all')">Laat alles zien <b>12</b></button>
+       <button class="btn" data-filter="Media" onclick="filterObjects('media')">Media en Cultuur <b>3</b></button>
+       <button class="btn" data-filter="Economie" onclick="filterObjects('Economie')">Economie <b>2</b></button>
+       <button class="btn" data-filter="tech" onclick="filterObjects('Tech')">Tech <b>6</b></button>
+       <button class="btn" data-filter="sport" onclick="filterObjects('Sport')">Sport <b>3</b></button>
    </div>
 
    <!-- De Plaatjes Zelf -->
    <div class="objects">
-       <div class="box Corona"><img src="/Nieuws IMG/Corona.jpg" alt="Corona"> </div>
-       <div class="box Economie"><img src="/Nieuws IMG/economie.PNG" alt="Economie"></div>
-       <div class="box Tech"><img src="/Nieuws IMG/tech.PNG" alt="Tech Plaatje"></div>
-       <div class="box Sport"><img src="/Nieuws IMG//sport.PNG" alt=""></div>
+      <h4>Media</h4>
+       <div class="box media"><a href="/Nieuws IMg/Media1.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/Media1.PNG"></a> <a href="/Nieuws IMg/media2.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/media2.PNG"></a> <a href="/Nieuws IMg/media3.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/media3.PNG"></a> </div>
+      <h4>Economie</h4>
+       <div class="box Economie"><a href="/Nieuws IMg/economie.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/economie.PNG"> <a href="/Nieuws IMg/economie2.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/economie2.PNG"></div>
+      <h4>Tech</h4>
+       <div class="box Tech"><a href="/Nieuws IMg/tech.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/tech.PNG"> <a href="/Nieuws IMg/tech2.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/tech2.PNG"> <a href="/Nieuws IMg/tech3.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/tech3.PNG">  <a href="/Nieuws IMg/tech4.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/tech4.PNG"> <a href="/Nieuws IMg/tech6.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/tech6.PNG">  <a href="/Nieuws IMg/tech7.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/tech7.PNG"> </div>
+      <h4>Sport</h4>                                                                                                                                                                                                                                                                                      
+       <div class="box Sport"> <a href="/Nieuws IMg/sport.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/sport.PNG"></a> <a href="/Nieuws IMG/sport3.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/sport3.PNG"></a> <a href="/Nieuws IMg/sport2.PNG" data-lightbox="mygallery"><img id="nieuwsimg" src="/Nieuws IMG/sport2.PNG"></a> </div>
+       
    </div>
 
 
-   <script src="main.js"></script>
+   <script src="/js/main.js"></script>
 </body>
 </html>

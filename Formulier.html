@@ -6,47 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- De JQuery Link -->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
 </head>
 <body>
+
+  
+    <!-- De Navbar -->
+
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-        <a href="index.html" class="navbar-brand">HOME</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarMenu">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="Formulier.html" class="nav-link">Formulier</a>
-            </li>
-            <li class="nav-item">
-              <a href="nieuws.html" class="nav-link">Nieuws</a>
-            </li>
-            <li class="nav-item">
-              <a href="Opmerkingen.html" class="nav-link">Opmerkingen</a>
-            </li>
-          </ul>
-        </div>
-         
-      </nav>
+      <a href="index.html" class="navbar-brand">HOME</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="Formulier.html" class="nav-link">Formulier</a>
+          </li>
+          <li class="nav-item">
+            <a href="nieuws.html" class="nav-link">Nieuws</a>
+          </li>
+          <li class="nav-item">
+            <a href="Comments.html" class="nav-link">Opmerkingen</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
 
-    <h1>Hier kan de gebruiker zijn gegevens invullen en er word gecontrolleerd of ze wel kloppen</h1>
-
+<br>
     <div class="container mt-5">
       <h1>Vul uw gegevens in</h1>
       <form class="row g-3">
         <div class="col-md-6">
           <label for="Naam" class="form-label">Uw Naam</label>
-          <input type="text" class="form-control" id="Naam" required>
-        </div>
-        <div class="col-md-6">
-          <label for="Adres" class="form-label">Uw Adres</label>
-          <input type="text" class="form-control" id="Adres" required>
+          <input type="text" class="form-control" placeholder="Vul Uw Naam In" id="Naam" required>
         </div>
       </form>
+        <div class="col-md-6">
+          <label for="Adres" class="form-label">Uw Adres</label>
+          <input type="text" class="form-control" placeholder="Uw Email Adres" id="Adres" required>
+        </div>
+        <br>
+        <!-- De Knop -->
+        <div class="col-md-12">
+          <button id="knop" type="submit" data-toggle="modal" class="btn btn-primary"  data-target="#exampleModal">Verzenden</button>
+
+          <h4>Klik op de knoppen voor de eisen</h4>
+        </div>
+
+        <!--De Collapse Sectie-->
+    <a href="#" class="btn btn-link" data-toggle="collapse" data-target="#Laatinfozien">Naam</a>
+    
+    <a href="#" class="btn btn-link" data-toggle="collapse" data-target="#laatemailzien">Email</a>
+
+    <div class="collapse" id="Laatinfozien">
+        <h3>Haalloo ik ben snel weg zeg!!</h3>
     </div>
 
-</body>
-</html>
+    <div class="collapse" id="laatemailzien">
+      <h3>Vul een geldig email adres in!</h3>
+  </div>
+
+
+      
+
+        <!-- De Modal zelf -->
+        <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Krijg updates</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus tempora placeat commodi, itaque esse ipsa velit ab cumque? Quis quisquam, ex numquam magnam quasi repellat rem sed dolores necessitatibus!</p>
+                <label for="modal-email"></label>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+        <!-- Deze script is voor de Modal en Collapse Functie -->
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        </body>
+        </html>

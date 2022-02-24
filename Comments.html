@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opmerkingen</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="/css/style.css">
+
+  <!-- De JQuery Link -->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+</head>
+<body>
+ <!-- De Navbar -->
+
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+    <a href="index.html" class="navbar-brand">HOME</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="Formulier.html" class="nav-link">Formulier</a>
+        </li>
+        <li class="nav-item">
+          <a href="nieuws.html" class="nav-link">Nieuws</a>
+        </li>
+        <li class="nav-item">
+          <a href="Opmerkingen.html" class="nav-link">Opmerkingen</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!--Ik had geen flauw idee hoe ik dit het best kon oplossen dus had ik maar een br tag geplaatst-->
+<br>
+<br>
+<br>
+
+
+  <article class="regular">
+      <h2>Vul Uw Comment In</h2>
+    <!--Naam veld-->
+      <label for="tbuser">Naam:</label>
+      <input type="text" id="tbuser" placeholder="Vul Uw Naam In" required>
+    <br>
+      <!--De texbox-->
+
+      <label for="tbuser">Uw Opmerking:</label>
+      <input   type="text" id="tbcomment" placeholder="Wat heeft u te zeggen">
+    <br>
+    <!-- Btn om de opmerking te plaatsen -->
+      <input type="button" id="btn1" value="Plaats Uw Opmerking" required>
+
+      <p class="" id=""></p>
+  </article>
+
+
+
+  <!--De Media Object-->
+
+<div class="media">
+    <img class="mr-3" src="/foto-3.jpg" alt="Generic placeholder image">
+    <div class="media-body">
+        <h5 class="output" id="output1" class="mt-0"></h5>
+      <!--De input voor de opmerking-->
+        <h5 class="output" id="output2" class="mt-0"></h5>
+      <div class="media mt-3">
+        <a class="pr-3" href="#">
+          <img src="/foto-2.png" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+          <h2 class="output"  id="output1" class="mt-0"></h2>
+          <h4 class="output" id="output2" class="mt-0"></h4>        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //De Values van de Naam invoering:
+      const txt1 = document.getElementById('tbuser');
+      const btn1 = document.getElementById('btn1');
+      const out1 = document.getElementById('output1');
+
+      const txt2 = document.getElementById('tbcomment');
+      const out2 = document.getElementById('output2');
+
+
+    
+      function fun1() {
+          out1.innerHTML = txt1.value;
+          out2.innerHTML = txt2.value;
+      }
+
+      btn1.addEventListener('click', fun1);
+
+
+
+        //De Values van de opmerking
+        //const txt2 = document.getElementById('tbcomment');
+       // const out2 = document.getElementById('output2');
+
+      
+
+
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

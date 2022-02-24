@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opmerkingen</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- De JQuery Link -->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
       <!-- De Navbar -->
+
+     
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
     <a href="index.html" class="navbar-brand">HOME</a>
@@ -31,9 +36,74 @@
         </li>
       </ul>
     </div>
+  </div>
   </nav>
+
+
+  <!-- Hier Komen Opmerkingen Te Staan  -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>De pagina title</h1>
+        <p>Hier kan de gebruiker zijn mening geven op de website of reageren op het nieuws.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Opmerking Nummer 1</h3>
+        <ul class="list-unstyled">
+          <li class="media">
+            <img class="mr-3" src="/foto-3.jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">De Titiel</h5>
+               Dit is de Eerst opmerking ik vond het een matige website er kan nog veel veranderd worden zoals:
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- De CommentBox -->
+
+  <div class="form">
+    <p>Naam:</p> <input type="text" id="naam"> <br>
+
+  <p></p> Vul Uw Opmerking In:  <textarea id="bodyText" cols="30" rows="5"></textarea>
+  </div>
+
+  <div class="container">
+
+
+  </div>
   
 
     <h1>Hier kunnen mensen opmerkingen plaatsen en die worden ook laten zien</h1>
+
+    <article class="regular">
+      <h2>Texbox</h2>
+
+      <label for="tbuser">Uw Naam:</label>
+      <input type="text" id="tbuser" placeholder="Vul Uw Naam In" maxlength="15">
+
+      <input type="button" value="Publiceer">
+
+      <p class="output" id="output1"></p>
+    </article>
+
+    <script>
+      const txt1 = document.getElementById('tbuser');
+      const btn1 = document.getElementById('btn1');
+      const out1 = document.getElementById('output1');
+
+      function fun1() {
+        out1.innerHTML = txt1.value;
+      }
+
+      btn1.addEventListener('click',fun1);
+
+    </script>
+
+    <script src="/main.js" type="text/javascript"></script>
 </body>
 </html>
